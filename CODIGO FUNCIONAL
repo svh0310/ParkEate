@@ -1,0 +1,66 @@
+import java.util.Scanner;
+class Main
+{
+    public static void parqueaderoCarros()
+    {
+        Scanner scanner = new Scanner(System.in);
+        String parkings = "Si desea ir a el parqueadero norte oprima 1, si desea ir al parqueadero sur oprima 2, si desea ir a los guayabos oprima 3.";
+        System.out.println("Ingrese a cual parqueadero desea ir: "+parkings);
+        int numParking = scanner.nextInt();
+        if(numParking==1)
+        {
+            int numRandom = (int)(Math.random()*435+1);
+            System.out.println("En el parqueadero norte quedan  "+numRandom+" Parqueaderos.");
+            System.out.println("Ingrese la direccion de salida: ");
+
+        }
+        else if(numParking==2)
+        {
+            int numRandom = (int)(Math.random()*514+1);
+            System.out.println("En el parqueadero sur quedan  "+numRandom+" Parqueaderos.");
+            System.out.println("Ingrese la direccion de salida: ");
+            
+        }
+        else if(numParking==3)
+        {
+            int numRandom = (int)(Math.random()*387+1);
+            System.out.println("En el parqueadero los guayabos quedan  "+numRandom+" Parqueaderos.");
+            System.out.println("Ingrese la direccion de salida: ");  
+        }
+    }
+    public static void parqueaderoMotos()
+    {
+    Scanner scanner = new Scanner(System.in);
+    String parkings = "Si desea ir al parqueadero sur oprima 1, si desea ir a los guayabos oprima 2.";
+    System.out.println("Ingrese a cual parqueadero desea ir: "+parkings);
+    int moto  = scanner.nextInt();
+        if(moto==1)
+        {
+            int numRandom = (int)(Math.random()*320+1);
+            System.out.println("En el parqueadero sur quedan  "+numRandom+" Parqueaderos.");
+            System.out.println("Ingrese la direccion de salida: ");
+            
+        }
+        else if(moto==2)
+        {
+            int numRandom = (int)(Math.random()*120+1);
+            System.out.println("En el parqueadero los guayabos quedan  "+numRandom+" Parqueaderos.");
+            System.out.println("Ingrese la direccion de salida: ");  
+        }   
+    }
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Te movilizas en carro o en moto?");
+        String answer = scanner.nextLine();
+        if(answer.equals("carro"))
+        {
+            parqueaderoCarros();
+        }
+        else
+        {
+            parqueaderoMotos();
+        }
+
+    }
+}
